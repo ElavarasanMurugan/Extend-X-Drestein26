@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">🧠 PROBLEM STATEMENT 01</h1>
-<h2 align="center">Too Much Information — Find What Matters</h2>
+<h2 align="center">Find What Matters</h2>
 
 <p align="center">
   <img src="https://img.shields.io/badge/PS-01-blue?style=for-the-badge" alt="PS01">

@@ -9,7 +9,7 @@ This guide outlines the **submission requirements**, **pre-submission checklist*
 Before presenting your Chrome Extension to the judges, ensure your solution meets the following criteria:
 
 * [ ] **Chrome Extension Compatibility**: The extension loads cleanly in Google Chrome via `chrome://extensions` (Developer Mode -> *Load Unpacked*).
-* [ ] **Problem Alignment**: The extension directly solves either **PS-01 (Too Much Information)** or **PS-02 (Think Before You Click)**.
+* [ ] **Problem Alignment**: The extension directly solves either **PS-01 (Find What Matters)** or **PS-02 (Think Before You Click)**.
 * [ ] **Functional MVP**: Core features work reliably on live web pages during testing.
 * [ ] **Clean User Interface**: The popup, side panel, or page overlay UI is easy to read and navigate.
 * [ ] **Code Readiness**: Every team member is prepared to answer technical questions about the codebase.
@@ -19,7 +19,7 @@ Before presenting your Chrome Extension to the judges, ensure your solution meet
 
 ## 🎤 2. Presentation & Demonstration Structure
 
-Each team will have a dedicated time slot to present their solution to the judging panel. We recommend structuring your presentation into the following 7 core areas:
+Each team will have to present their solution to the judging panel. We recommend structuring your presentation into the following 7 core areas:
 
 ```text
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -80,8 +80,8 @@ When submitting your final project, prepare the following items:
 ## 🔗 Quick Links
 
 * 🏠 [**Back to Event Homepage (README)**](./README.md)
-* 🧠 [**Problem Statement 01**](./PS-01-Too-Much-Information.md)
-* 🛡️ [**Problem Statement 02**](./PS-02-Think-Before-You-Click.md)
+* 🧠 [**Problem Statement 01 (Find What Matters)**](./PS-01-Find-What-Matters.md)
+* 🛡️ [**Problem Statement 02 (Think Before You Click)**](./PS-02-Think-Before-You-Click.md)
 * 📘 [**Common Rules & Integrity Policy**](./COMMON-RULES.md)
 
 ---

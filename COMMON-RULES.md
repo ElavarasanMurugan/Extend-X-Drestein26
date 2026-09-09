@@ -11,10 +11,6 @@ Participants are **permitted** to use modern AI development tools, including but
 * **GitHub Copilot**, **Cursor**, **Supermaven**, **Windsurf**
 * AI code generators, snippet generators, and documentation assistants.
 
-### Mandatory Requirements for AI Usage:
-1. **Code Comprehension**: Every team member must thoroughly understand the code included in your submission. Evaluators may ask any team member to explain specific lines of code, architecture decisions, or algorithms during the final Q&A.
-2. **No Blind Copy-Pasting**: Submitting code that the team cannot explain will result in significant point deductions or disqualification.
-
 ---
 
 ## 🚫 2. Originality & Fair Play
@@ -51,8 +47,8 @@ Participants are **permitted** to use modern AI development tools, including but
 ## 🔗 Quick Links
 
 * 🏠 [**Back to Event Homepage (README)**](./README.md)
-* 🧠 [**Problem Statement 01**](./PS-01-Too-Much-Information.md)
-* 🛡️ [**Problem Statement 02**](./PS-02-Think-Before-You-Click.md)
+* 🧠 [**Problem Statement 01 (Find What Matters)**](./PS-01-Find-What-Matters.md)
+* 🛡️ [**Problem Statement 02 (Think Before You Click)**](./PS-02-Think-Before-You-Click.md)
 * 📝 [**Submission Guidelines**](./SUBMISSION-GUIDELINES.md)
 
 ---

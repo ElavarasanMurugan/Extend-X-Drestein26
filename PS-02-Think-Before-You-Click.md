@@ -88,7 +88,7 @@ Your team can explore directions such as:
 ## 🔗 Navigation
 
 * 🏠 [**Back to Event Homepage (README)**](./README.md)
-* 🧠 [**View Problem Statement 01**](./PS-01-Too-Much-Information.md)
+* 🧠 [**View Problem Statement 01**](./PS-01-Find-What-Matters.md)
 * 📘 [**Read Common Rules**](./COMMON-RULES.md)
 * 📝 [**Read Submission Guidelines**](./SUBMISSION-GUIDELINES.md)
 

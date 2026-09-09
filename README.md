@@ -37,9 +37,7 @@ Select one of the problem statements below to explore full details, requirements
 
 <h2>🧠 PROBLEM STATEMENT 01</h2>
 
-<h3><b>Too Much Information</b></h3>
-
-<p><i>Find What Matters</i></p>
+<h3><b>Find What Matters</b></h3>
 
 <p>
 Turn information overload into useful, accessible, and structured insights for users navigating dense web pages.
@@ -47,7 +45,7 @@ Turn information overload into useful, accessible, and structured insights for u
 
 <br>
 
-<a href="./PS-01-Too-Much-Information.md">
+<a href="./PS-01-Find-What-Matters.md">
   <img src="https://img.shields.io/badge/VIEW%20PROBLEM%20STATEMENT%2001-%E2%86%92-blue?style=for-the-badge" alt="View PS1">
 </a>
 
@@ -100,7 +98,7 @@ Empower users to make safer decisions online by identifying, analyzing, and warn
 <details>
 <summary><b>🤖 AI Tool Usage</b></summary>
 <br>
-AI tools such as <b>ChatGPT, Gemini, Claude, GitHub Copilot, Cursor</b>, and other AI-assisted development tools are permitted. However, every team member must thoroughly understand and be able to explain all submitted code during evaluation.
+AI tools such as <b>ChatGPT, Gemini, Claude, GitHub Copilot, Cursor</b>, and other AI-assisted development tools are permitted.
 </details>
 
 <details>
@@ -143,7 +141,7 @@ Submissions will be evaluated across seven core dimensions:
 
 * 📘 [**COMMON RULES**](./COMMON-RULES.md) — Comprehensive rules regarding code compliance, AI usage, and integrity.
 * 📝 [**SUBMISSION GUIDELINES**](./SUBMISSION-GUIDELINES.md) — Step-by-step checklist, demo structure, and presentation format.
-* 🧠 [**PROBLEM STATEMENT 01**](./PS-01-Too-Much-Information.md) — Too Much Information (Find What Matters).
+* 🧠 [**PROBLEM STATEMENT 01**](./PS-01-Find-What-Matters.md) — Find What Matters.
 * 🛡️ [**PROBLEM STATEMENT 02**](./PS-02-Think-Before-You-Click.md) — Think Before You Click (Browse Smarter. Browse Safer.).
 
 ---
