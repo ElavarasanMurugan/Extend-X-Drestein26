@@ -1,154 +1,281 @@
-<p align="center">
-  <img src="assets/extend-x-banner.png" width="100%" alt="EXTEND-X 2026 Banner">
-</p>
+# WebLens – Task-Aware Webpage Intelligence
 
-<h1 align="center">⚡ EXTEND-X 2026</h1>
-<p align="center">
-  <b>CHROME EXTENSION CHALLENGE</b><br>
-  <i>Build • Create • Innovate</i>
-</p>
+> **Chrome Extension Manifest V3** | **Vanilla JavaScript** | **Zero External Dependencies**
 
-<p align="center">
-  <a href="#-badges"><img src="https://img.shields.io/badge/EXTEND--X-2026-blue?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Event"></a>
-  <a href="#-event-details"><img src="https://img.shields.io/badge/Date-11%20September%202026-orange?style=for-the-badge" alt="Date"></a>
-  <a href="#-event-details"><img src="https://img.shields.io/badge/Time-8%3A00%20AM%20%E2%80%93%2012%3A00%20PM-green?style=for-the-badge" alt="Time"></a>
-  <a href="#-event-details"><img src="https://img.shields.io/badge/Venue-Saveetha%20Engineering%20College-red?style=for-the-badge" alt="Venue"></a>
-  <a href="#-event-details"><img src="https://img.shields.io/badge/Team-Max%204%20Members-purple?style=for-the-badge" alt="Team"></a>
-</p>
+WebLens transforms how users extract value from information-dense webpages. Rather than general, unfocused summaries or slow chat interactions, WebLens analyzes the current page through **task-specific lenses** to extract, organize, focus, and connect evidence directly to its source.
 
 ---
 
-## 🎯 The Challenge
+## 1. Problem
+Modern web pages (articles, technical documentation, product reviews, and comparison tables) are overloaded with marketing copy, navigation chrome, sidebars, advertisements, and irrelevant details. Users arrive at a page with a specific intent (learning a concept, comparing specs, making a purchasing decision, or finding an API signature), but spend precious minutes manually scanning and filtering noise.
 
-Welcome to **EXTEND-X 2026**, the official Chrome Extension Challenge at Saveetha Engineering College!
-
-Your task is to **build a functional Chrome Extension** that solves a real-world web browsing problem. Choose **ONE** of the two official problem statements below, transform your concept into a working Minimum Viable Product (MVP), and showcase your innovation to our panel of judges.
-
----
-
-## 🧩 Choose Your Challenge
-
-Select one of the problem statements below to explore full details, requirements, and evaluation guidelines:
-
-<table>
-<tr>
-
-<td width="50%" align="center" style="padding: 20px;">
-
-<h2>🧠 PROBLEM STATEMENT 01</h2>
-
-<h3><b>Find What Matters</b></h3>
-
-<p>
-Turn information overload into useful, accessible, and structured insights for users navigating dense web pages.
-</p>
-
-<br>
-
-<a href="./PS-01-Find-What-Matters.md">
-  <img src="https://img.shields.io/badge/VIEW%20PROBLEM%20STATEMENT%2001-%E2%86%92-blue?style=for-the-badge" alt="View PS1">
-</a>
-
-</td>
-
-<td width="50%" align="center" style="padding: 20px;">
-
-<h2>🛡️ PROBLEM STATEMENT 02</h2>
-
-<h3><b>Think Before You Click</b></h3>
-
-<p><i>Browse Smarter. Browse Safer.</i></p>
-
-<p>
-Empower users to make safer decisions online by identifying, analyzing, and warning against potentially risky web content.
-</p>
-
-<br>
-
-<a href="./PS-02-Think-Before-You-Click.md">
-  <img src="https://img.shields.io/badge/VIEW%20PROBLEM%20STATEMENT%2002-%E2%86%92-orange?style=for-the-badge" alt="View PS2">
-</a>
-
-</td>
-
-</tr>
-</table>
+Existing tools fail because:
+* Generic webpage summarizers drop crucial context, technical details, or specific figures.
+* AI chat sidebars force the user into tedious question-and-answer loops detached from the visual page.
+* Traditional search highlights only exact keyword matches without category organization or source traceability.
 
 ---
 
-## 🚀 Your EXTEND-X Journey
+## 2. Solution: The WebLens Principle
+
+$$\textbf{Task} \longrightarrow \textbf{Extract} \longrightarrow \textbf{Organize} \longrightarrow \textbf{Focus} \longrightarrow \textbf{Evidence}$$
+
+WebLens filters and maps content strictly according to the user's immediate cognitive task:
+1. **Task-Specific Relevance**: Content is filtered against targeted categories for the chosen task lens.
+2. **Visual Focus**: Meaningful sections receive non-destructive highlights while irrelevant sections are dimmed.
+3. **Information Map**: Extracted points are organized into structured, collapsible category cards with relevance rankings.
+4. **Source Traceability**: Every extracted point features a `[View Source ↗]` trigger that smoothly scrolls the host page to the exact element and pulses it.
+5. **Information Gap Detection**: Transparently identifies essential topics expected for the task that were omitted from the webpage (e.g. *"Battery information was not found on this page"*).
+
+---
+
+## 3. The 5 Task Lenses
+
+| Lens | Focus & Purpose | Extracted Categories |
+| :--- | :--- | :--- |
+| 💡 **Learn** | Understand foundational ideas & discoveries | *Concepts & Definitions*, *Methods & Explanations*, *Key Findings & Results*, *Core Takeaways* |
+| ⚖️ **Compare** | Evaluate specifications, costs, and options | *Pricing & Cost*, *Features & Specifications*, *Performance & Hardware*, *Pros, Cons & Differences* |
+| 🎯 **Decide** | Weigh trade-offs and evaluate evidence | *Benefits & Strengths*, *Risks & Warnings*, *Limitations & Trade-offs*, *Supporting Evidence* |
+| ⚡ **Technical**| Implement, configure, and debug software | *APIs & Functions*, *Setup & Installation*, *Configuration & Settings*, *Errors & Debugging* |
+| ✨ **Custom** | Targeted focus on user-defined query keywords | *Direct Matches*, *Related Information* |
+
+---
+
+## 4. System Architecture
 
 ```text
-┌─────────────────┐       ┌─────────────────┐       ┌─────────────────┐       ┌─────────────────┐
-│   01 EXPLORE    │  ──►  │    02 CHOOSE    │  ──►  │    03 BUILD     │  ──►  │     04 DEMO     │
-│ Read both PS    │       │ Select 1 PS     │       │ Create Chrome   │       │ Present & Demo  │
-│ carefully       │       │ for your team   │       │ Extension MVP   │       │ your working MVP│
-└─────────────────┘       └─────────────────┘       └─────────────────┘       └─────────────────┘
+                                  USER
+                                    |
+                                    v
+                           +------------------+
+                           |   Popup UI       |  (popup.html / popup.js)
+                           | Task Selection   |
+                           +--------+---------+
+                                    |  chrome.tabs.sendMessage
+                                    v
+                           +------------------+
+                           | Content Script   |  (content.js / pageState.js)
+                           |  Message Bridge  |
+                           +--------+---------+
+                                    |
+                                    v
+                           +------------------+
+                           | Task Controller  |  (taskController.js)
+                           +--------+---------+
+                                    |
+                                    v
+                           +------------------+
+                           |  DOM Extractor   |  (domExtractor.js)
+                           | (H1-H3, P, LI, TD|
+                           +--------+---------+
+                                    |
+                                    v
+                           +------------------+
+                           |  Task Analyzer   |  (taskAnalyzer.js)
+                           +--------+---------+
+                                    |
+            +-----------------------+-----------------------+
+            |                       |                       |
+            v                       v                       v
+    +---------------+       +---------------+       +---------------+
+    |   Relevance   |       |   Evidence    |       |      Gap      |
+    |    Engine     |       |   Extractor   |       |   Detector    |
+    | (relevance.js)|       | (evidence.js) |       | (gapDetector) |
+    +---------------+       +---------------+       +---------------+
+            |                       |                       |
+            +-----------------------+-----------------------+
+                                    |
+                                    v
+                           +------------------+
+                           | Information Map  |  (informationMap.js)
+                           +--------+---------+
+                                    |
+            +-----------------------+-----------------------+
+            | sendResponse                                  | applyVisualFocus
+            v                                               v
+  +-------------------+                           +-------------------+
+  | Popup Presentation|                           | Webpage Focus     |
+  | - Summary Metrics |                           | - Yellow Highlight|
+  | - Category Cards  |                           | - Irrelevant Dim  |
+  | - Gap Alerts      |                           | - Scroll to Source|
+  +-------------------+                           +-------------------+
 ```
 
-1. **01 — EXPLORE**: Read both problem statements carefully to understand the context and requirements.
-2. **02 — CHOOSE**: Select **ONE** problem statement that best matches your team's idea and technical capabilities.
-3. **03 — BUILD**: Develop a working Chrome Extension MVP within the designated hackathon timeline.
-4. **04 — DEMO**: Demonstrate your live extension and present your implementation to the judges.
+---
+
+## 5. Folder Structure
+
+```text
+weblens/
+├── manifest.json            # Chrome Manifest V3 configuration
+├── README.md                # Documentation and architecture guide
+│
+├── popup/                   # Presentation Layer (Team Member 1)
+│   ├── popup.html           # Popup UI layout and lens controls
+│   ├── popup.css            # Modern styling, transitions, and badges
+│   └── popup.js             # UI events, tab communication, card rendering
+│
+├── content/                 # Webpage Interaction Layer (Team Member 2)
+│   ├── content.js           # Chrome runtime message dispatcher
+│   ├── domExtractor.js      # Noise-free semantic DOM extractor
+│   ├── highlighter.js       # Non-destructive highlighter, dimmer & scroller
+│   └── pageState.js         # Runtime page state and cache manager
+│
+├── core/                    # Intelligence & Analysis Engine (Team Member 3)
+│   ├── taskController.js    # Analysis pipeline orchestrator
+│   ├── taskAnalyzer.js      # Task categorization & keyword rules
+│   ├── relevanceEngine.js   # Multi-factor relevance scoring
+│   ├── evidenceExtractor.js # Traceable evidence node builder
+│   ├── informationMap.js    # Standardized Information Map compiler
+│   └── gapDetector.js       # Expected topic gap identifier
+│
+├── shared/                  # Shared Specifications & Utilities
+│   ├── constants.js         # Task definitions, categories & scoring rules
+│   ├── messageTypes.js      # Standardized message schema
+│   └── utils.js             # Safe DOM, text truncation & regex utilities
+│
+├── icons/                   # Extension icons (16x16, 48x48, 128x128)
+│   ├── icon16.png
+│   ├── icon48.png
+│   └── icon128.png
+│
+└── test/
+    └── sample-article.html  # Comprehensive sample article for testing all 5 lenses
+```
 
 ---
 
-## 📋 Quick Rules & Policies
+## 6. Team Module Responsibilities
 
-<details>
-<summary><b>🤖 AI Tool Usage</b></summary>
-<br>
-AI tools such as <b>ChatGPT, Gemini, Claude, GitHub Copilot, Cursor</b>, and other AI-assisted development tools are permitted.
-</details>
+The modular architecture enables 3 team members to develop features simultaneously without code conflicts:
 
-<details>
-<summary><b>🚫 Originality & Fair Play</b></summary>
-<br>
-Copying another team's solution or submitting pre-existing projects is strictly prohibited. All submitted solutions must be developed during the official event window after the problem statement reveal.
-</details>
+### Team Member 1: Popup & Presentation Layer (`popup/`)
+* **Files**: `popup/popup.html`, `popup/popup.css`, `popup/popup.js`
+* **Responsibilities**:
+  * Task lens selector buttons and custom query input field.
+  * Rendering the structured `InformationMap` into expandable category cards.
+  * Handling user actions (Analyze, View Source, Restore Page).
+  * Enforcing zero analysis or DOM parsing inside the popup context.
 
-<details>
-<summary><b>🔌 External APIs & Libraries</b></summary>
-<br>
-External APIs, open-source libraries, datasets, and third-party services are allowed. Teams must explicitly disclose all external services used during their final presentation.
-</details>
+### Team Member 2: Webpage Extraction & Highlighting (`content/`)
+* **Files**: `content/domExtractor.js`, `content/highlighter.js`, `content/pageState.js`, `content/content.js`
+* **Responsibilities**:
+  * Extracting readable text elements (`h1`, `h2`, `h3`, `p`, `li`, `td`) and stamping `data-weblens-id`.
+  * Filtering out advertisements, navigation bars, scripts, styles, and footers.
+  * Applying non-destructive CSS highlights (`.weblens-highlight`) and dimming (`.weblens-dimmed`).
+  * Smooth scrolling to original source elements upon `[View Source]` requests with a visual pulse effect.
+  * Completely restoring page appearance (`restorePage()`).
 
-<details>
-<summary><b>🎯 Realistic Scope & MVP Focus</b></summary>
-<br>
-The goal is to build a functional Minimum Viable Product (MVP) that clearly demonstrates your core concept. Focus on delivering a polished, working solution for the core problem rather than an incomplete list of excessive features.
-</details>
-
----
-
-## 🏆 Evaluation Focus
-
-Submissions will be evaluated across seven core dimensions:
-
-| Criteria | What We Look For |
-|---|---|
-| 🎯 **Problem Understanding** | Does the solution accurately address the selected Problem Statement? |
-| 💡 **Innovation & Creativity** | Is the technical approach novel, creative, and well-thought-out? |
-| ⚙️ **Technical Implementation** | Is the extension well-coded, functional, and leveraging extension APIs efficiently? |
-| 👥 **Usefulness & Relevance** | Does it solve a real user pain point in everyday web browsing? |
-| 🎨 **User Experience (UX/UI)** | Is the interface intuitive, clean, and seamless for the user? |
-| ✅ **Functionality** | Does the MVP work reliably during live testing without critical crashes? |
-| 🎤 **Demonstration & Q&A** | Can the team clearly explain the architecture, logic, and live workflow? |
+### Team Member 3: Analysis & Relevance Engine (`core/`)
+* **Files**: `core/taskController.js`, `core/taskAnalyzer.js`, `core/relevanceEngine.js`, `core/evidenceExtractor.js`, `core/informationMap.js`, `core/gapDetector.js`
+* **Responsibilities**:
+  * End-to-end coordination in `taskController.js`.
+  * Scoring algorithms in `relevanceEngine.js` (frequency, tag weights, multi-keyword bonuses).
+  * Mapping evidence to source IDs in `evidenceExtractor.js`.
+  * Detecting missing expected topics in `gapDetector.js`.
+  * Constructing the standardized `InformationMap` JSON schema.
 
 ---
 
-## 📚 Navigation & Event Documents
+## 7. Standardized Communication Schema
 
-* 📘 [**COMMON RULES**](./COMMON-RULES.md) — Comprehensive rules regarding code compliance, AI usage, and integrity.
-* 📝 [**SUBMISSION GUIDELINES**](./SUBMISSION-GUIDELINES.md) — Step-by-step checklist, demo structure, and presentation format.
-* 🧠 [**PROBLEM STATEMENT 01**](./PS-01-Find-What-Matters.md) — Find What Matters.
-* 🛡️ [**PROBLEM STATEMENT 02**](./PS-02-Think-Before-You-Click.md) — Think Before You Click (Browse Smarter. Browse Safer.).
+All modules communicate via `shared/messageTypes.js`:
+
+```javascript
+const MESSAGE_TYPES = {
+  ANALYZE_PAGE: 'ANALYZE_PAGE',       // Payload: { taskType, customQuery }
+  SCROLL_TO_SOURCE: 'SCROLL_TO_SOURCE', // Payload: { sourceId }
+  RESTORE_PAGE: 'RESTORE_PAGE',         // Restores original styles
+  GET_STATUS: 'GET_STATUS'              // Retrieves active page status
+};
+```
+
+### Information Map Output Schema
+The analysis output returned to the Popup is strictly decoupled from the internal analyzer implementation:
+
+```json
+{
+  "task": "decide",
+  "timestamp": 1726027800000,
+  "totalRelevantItems": 5,
+  "totalRelevantElements": 4,
+  "categories": [
+    {
+      "name": "Benefits & Strengths",
+      "count": 2,
+      "items": [
+        {
+          "id": "ev-weblens-el-4",
+          "title": "Advantage",
+          "category": "Benefits & Strengths",
+          "text": "The primary advantage of ApexCloud is its seamless zero-downtime rolling update pipeline...",
+          "sourceId": "weblens-el-4",
+          "tag": "p",
+          "relevanceScore": 3.5,
+          "matchedKeywords": ["advantage", "benefit"]
+        }
+      ]
+    },
+    {
+      "name": "Limitations & Trade-offs",
+      "count": 1,
+      "items": [...]
+    }
+  ],
+  "relevantElements": ["weblens-el-4", "weblens-el-5", "weblens-el-6"],
+  "gaps": [
+    {
+      "topic": "Warranty & Support",
+      "message": "Warranty & Support information was not found on this page.",
+      "severity": "notice"
+    }
+  ]
+}
+```
 
 ---
 
-<hr>
+## 8. How to Install and Run
 
-<p align="center">
-  <b>BUILD • CREATE • INNOVATE 🚀</b><br>
-  <i>EXTEND-X 2026 — Saveetha Engineering College</i>
-</p>
+1. Clone or download this repository.
+2. Open Google Chrome and navigate to `chrome://extensions`.
+3. Enable **Developer mode** using the toggle in the top-right corner.
+4. Click **Load unpacked**.
+5. Select the `weblens` directory (`Extend-X/weblens`).
+6. WebLens is now installed and visible in the Chrome toolbar.
+
+---
+
+## 9. How to Test the Extension
+
+1. Open the included test page:
+   * Open Chrome and press `Ctrl + O` (or drag and drop into Chrome):
+   * Select `Extend-X/weblens/test/sample-article.html`.
+2. Click the **WebLens extension icon** in the browser toolbar.
+3. Select any Task Lens (e.g. **Compare**).
+4. Click **Analyze Page**:
+   * Observe relevant specs and pricing tables highlighted in yellow.
+   * Observe irrelevant sections dimmed for focus.
+   * Notice the Information Map populated with categorized points.
+   * Notice the **Information Gap**: *"Battery & Power information was not found on this page."*
+5. Click **View Source ↗** on any evidence card:
+   * The page automatically scrolls to the source element and pulses with a golden border.
+6. Click **Restore Page**:
+   * All highlights and dimming are removed and original styles are restored.
+
+---
+
+## 10. Future AI Roadmap
+
+WebLens was architected with pluggable interfaces specifically to allow swapping the keyword relevance engine for an AI/LLM engine without altering the UI, content script, or highlighting system:
+
+```text
+Current MVP:
+  DOM Elements -> Keyword Relevance Engine -> Information Map
+
+Future AI Evolution:
+  DOM Elements -> Chrome Prompt API / On-Device Gemini Nano / Embeddings -> Information Map
+```
+
+* **Zero Interface Breakage**: `TaskAnalyzer.analyzeContent()` can be made `async` and call Chrome's built-in `window.ai.languageModel` (Prompt API) or a remote embedding API while returning the exact same `InformationMap` schema.
+* **Semantic Nuance**: Enhances gap detection and multi-lingual webpage understanding without changing the Presentation or Highlighting layers.
